@@ -1,10 +1,25 @@
 {
-  "name": "solid-vite-lib",
+  "name": "@yaldram/solid-vite-lib",
   "version": "0.0.1",
   "description": "A starter project for developing a UI library using SolidJS & Typescript.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs"
+    },
+    "./main.css": {
+      "import": "./dist/css/main.css"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +30,31 @@
   "bugs": {
     "url": "https://github.com/yaldram/solid-vite-lib/issues"
   },
-  "homepage": "https://github.com/yaldram/solid-vite-lib#readme"
+  "homepage": "https://github.com/yaldram/solid-vite-lib#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@storybook/addon-essentials": "^7.0.2",
+    "@storybook/addon-interactions": "^7.0.2",
+    "@storybook/addon-links": "^7.0.2",
+    "@storybook/blocks": "^7.0.2",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/node": "^18.15.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.61.0",
+    "solid-js": "^1.7.3",
+    "storybook": "^7.0.2",
+    "storybook-solidjs": "^1.0.0-beta.2",
+    "storybook-solidjs-vite": "^1.0.0-beta.2",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.1",
+    "vite-plugin-solid": "^2.7.0"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.7.3"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.5.1"
+  }
 }
