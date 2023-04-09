@@ -1,7 +1,7 @@
-import { Component, ComponentProps } from "solid-js";
+import { Component, ComponentProps } from 'solid-js'
 
-export type BoxProps = ComponentProps<"div">;
+export type BoxProps = ComponentProps<'div'>
 
 export const Box: Component<BoxProps> = (props) => {
-  return <div {...props} />;
-};
+  return <div {...props} />
+}

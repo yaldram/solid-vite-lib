@@ -1,0 +1,9 @@
+build/
+dist/
+node_modules/
+storybook-static
+.snapshots/
+yarn.lock
+*.min.js
+*.css
+*.svg

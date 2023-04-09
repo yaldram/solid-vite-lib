@@ -18,8 +18,11 @@
   },
   "scripts": {
     "build": "tsc && vite build",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint \"./**/*\"",
+    "lint:fix": "eslint \"src/**/*\" --fix",
+    "pretty": "prettier . --write",
+    "storybook": "storybook dev -p 6006"
   },
   "repository": {
     "type": "git",
@@ -39,6 +42,13 @@
     "@storybook/blocks": "^7.0.2",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-solid": "^0.12.0",
+    "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.61.0",
