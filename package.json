@@ -1,0 +1,19 @@
+{
+  "name": "solid-vite-lib",
+  "version": "0.0.1",
+  "description": "A starter project for developing a UI library using SolidJS & Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaldram/solid-vite-lib.git"
+  },
+  "author": "Arsalan Yaldram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaldram/solid-vite-lib/issues"
+  },
+  "homepage": "https://github.com/yaldram/solid-vite-lib#readme"
+}
