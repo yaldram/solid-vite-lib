@@ -1,0 +1,6 @@
+/** Import the theme */
+@use "./themes/main.scss";
+
+/** Import utility classes */
+@use "./utilities/colors.scss";
+@use "./utilities/spacings.scss";

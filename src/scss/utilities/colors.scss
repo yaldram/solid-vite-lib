@@ -1,0 +1,33 @@
+$colors-list: blue, cyan, gray, green, pink,  purple, red, yellow;
+
+$colors-shades: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+@each $color in $colors-list {
+  @each $shade in $colors-shades {
+    $colorShade: #{"" + $color + $shade};
+
+    .color-#{$colorShade} {
+      color: var(--#{$colorShade});
+    }
+
+    .bg-#{$colorShade} {
+      background-color: var(--#{$colorShade});
+    }
+  }
+}
+
+.color-white {
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.color-black {
+  color: black;
+}
+
+.bg-black {
+  background-color: black;
+}
