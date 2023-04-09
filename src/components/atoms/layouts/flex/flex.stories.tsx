@@ -4,6 +4,7 @@ import { Component } from 'solid-js'
 
 import { spacingControls } from '../../../../cva-utils'
 import { Flex, FlexProps, Spacer } from '.'
+import { StoryObj } from 'storybook-solidjs'
 
 const { spacingOptions, spacingLabels } = spacingControls()
 
@@ -22,7 +23,7 @@ const Container: Component<FlexProps> = (props) => {
   )
 }
 
-export const Playground = {
+export const Playground: StoryObj<FlexProps> = {
   args: {
     direction: 'row',
     justify: 'start',
@@ -129,7 +130,7 @@ export const FlexSpacer = {
   )
 }
 
-export const Stack = {
+export const Stack: StoryObj<FlexProps> = {
   args: {
     direction: 'row',
     gap: 'md',

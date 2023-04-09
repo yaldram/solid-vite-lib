@@ -6,6 +6,19 @@ import solidPlugin from 'vite-plugin-solid'
 import { peerDependencies } from './package.json'
 
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use "./src/scss/variables/_borders.scss" as *;
+          @use "./src/scss/variables/_fonts.scss" as *;
+          @use "./src/scss/variables/_radii.scss" as *;
+          @use "./src/scss/variables/_spacings.scss" as *;
+          @use "./src/scss/variables/_colors.scss" as *;
+        `
+      }
+    }
+  },
   plugins: [solidPlugin()],
   build: {
     outDir: 'dist',

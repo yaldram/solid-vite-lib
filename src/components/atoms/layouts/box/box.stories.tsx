@@ -1,7 +1,8 @@
 /** @jsxImportSource solid-js */
 
 import { spacingControls } from '../../../../cva-utils'
-import { Box } from '.'
+import { Box, BoxProps } from '.'
+import { StoryObj } from 'storybook-solidjs'
 
 export default {
   title: 'Atoms/Layout/Box'
@@ -9,7 +10,7 @@ export default {
 
 const { spacingOptions, spacingLabels } = spacingControls()
 
-export const Playground = {
+export const Playground: StoryObj<BoxProps> = {
   args: {
     p: 'sm',
     m: 'sm',
