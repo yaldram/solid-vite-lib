@@ -48,6 +48,8 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-solid": "^0.12.0",
+    "husky": "^8.0.3",
+    "nano-staged": "^0.8.0",
     "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -66,5 +68,8 @@
   },
   "dependencies": {
     "class-variance-authority": "^0.5.1"
+  },
+  "nano-staged": {
+    "*.{js,jsx,ts,tsx}": "prettier --write"
   }
 }
