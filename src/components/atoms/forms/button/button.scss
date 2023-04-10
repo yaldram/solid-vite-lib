@@ -154,6 +154,17 @@
   }
 
   &.flat {
+    &.neutral {
+      background-color: var(--color-neutral-light);
+      color: var(--color-neutral-light-contrast);
+      &:hover {
+       background-color: var(--color-neutral-light-hover);
+      }  
+      &:active {
+        background-color: var(--color-neutral-light-active);
+      } 
+    }
+
     &.primary {
       background-color: var(--color-primary-light);
       color: var(--color-primary-light-contrast);
