@@ -1,0 +1,212 @@
+.button {
+  appearance: none;
+  box-sizing: border-box;
+  font-weight: $font-size-sm;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 1.25;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  transition: background 0.25s ease 0s, 
+  color 0.25s ease 0s, 
+  border-color 0.25s ease 0s, 
+  box-shadow 0.25s ease 0s, 
+  transform 0.25s ease 0s, 
+  opacity 0.25s ease 0s;
+
+  border-width: $border-weight-normal;
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &.xs {
+    border-radius: $radii-xs;
+    height: $space-10;
+    padding-left: $space-3;
+    padding-right: $space-3;
+    line-height: $space-10;
+    min-width: $space-20; 
+    font-size: $font-size-xs;
+  }
+
+  &.sm {
+    border-radius: $radii-sm;
+    height: $space-12;
+    padding-left: $space-5;
+    padding-right: $space-5;
+    line-height: $space-14;
+    min-width: $space-36; 
+    font-size: $font-size-sm;
+  }
+
+  &.md {
+    border-radius: $radii-md;
+    height: $space-14;
+    padding-left: $space-7;
+    padding-right: $space-7;
+    line-height: $space-14;
+    min-width: $space-48; 
+    font-size: $font-size-sm;
+  }
+
+  &.lg {
+    border-radius: $radii-base;
+    height: $space-16;
+    padding-left: $space-9;
+    padding-right: $space-9;
+    line-height: $space-15;
+    min-width: $space-60; 
+    font-size: $font-size-md;
+  }
+
+  &.xl {
+    border-radius: $radii-xl;
+    height: $space-18;
+    padding-left: $space-10;
+    padding-right: $space-10;
+    line-height: $space-17;
+    min-width: $space-72; 
+    font-size: $font-size-lg;
+  }
+
+  &.is-rounded {
+    border-radius: $radii-pill;
+  }
+
+  &.is-auto {
+    width: auto;
+    min-width: min-content;
+  }
+
+  &.solid {
+    @each $scheme in $color-schemes {
+      $base: --color-#{$scheme}; // --color-primary
+      $contrast: #{$base}-solid-contrast;  // --color-primary-solid-contrast
+      &.#{$scheme} {
+        background: var($base);
+        color: var($contrast);
+      }
+    }
+  }
+
+  &.is-shadow {
+    @each $scheme in $color-schemes {
+      &.#{$scheme} {
+        box-shadow: 0 4px 14px 0 var(--color-#{$scheme}-shadow);
+      }
+    }
+  }
+
+  &.bordered {
+    background-color: transparent;
+    border-style: solid;
+
+    @each $scheme in $color-schemes {
+      &.#{$scheme} {
+        color: var(--color-#{$scheme});
+        border-color: var(--color-#{$scheme});
+      }
+    }
+  }
+
+  &.ghost {
+    background: transparent;
+    border-style: solid;
+
+    @each $scheme in $color-schemes {
+      $base: --color-#{$scheme}; // --color-primary
+      $contrast: #{$base}-solid-contrast;  // --color-primary-solid-contrast
+      
+      &.#{$scheme} {
+        color: var($base);
+        border-color: var($base);
+        &:hover {
+          color: var($contrast);
+          background-color: var($base);
+        } 
+      }
+    }
+  }
+
+  &.light {
+    background-color: transparent;
+
+    @each $scheme in $color-schemes {
+      $base: --color-#{$scheme}; // --color-primary
+      $active: #{$base}-light-active;  // --color-primary-light-active
+      
+      &.#{$scheme} {
+        color: var($base);
+        &:active {
+          background-color: var($active);
+        } 
+      }
+    }
+  }
+
+  &.flat {
+    &.primary {
+      background-color: var(--color-primary-light);
+      color: var(--color-primary-light-contrast);
+      &:hover {
+       background-color: var(--color-primary-light-hover);
+      }  
+      &:active {
+        background-color: var(--color-primary-light-active);
+      } 
+    }
+
+    &.secondary {
+      background-color: var(--color-secondary-light);
+      color: var(--color-secondary-light-contrast);
+      &:hover {
+        background-color: var(--color-secondary-light-hover);
+      } 
+      &:active {
+        background-color: var(--color-secondary-light-active);
+      } 
+    }
+
+    &.warning {
+      background-color: var(--color-warning-light);
+      color: var(--color-warning-light-contrast);
+      &:hover {
+        background-color: var(--color-warning-light-hover);
+      } 
+      &:active {
+        background-color: var(--color-warning-light-active);
+      } 
+    }
+
+    &.success {
+      background-color: var(--color-success-light);
+      color: var(--color-success-light-contrast);
+      &:hover {
+        background-color: var(--color-success-light-hover);
+      } 
+      &:active {
+        background-color: var(--color-success-light-active);
+      } 
+    }
+
+    &.error {
+      background-color: var(--color-error-light);
+      color: var(--color-error-light-contrast);
+      &:hover {
+        background-color: var(--color-error-light-hover);
+      } 
+      &:active {
+        background-color: var(--color-error-light-active);
+      } 
+    }
+  }
+}

@@ -153,6 +153,9 @@ export const Default: StoryObj<BadgeProps> = {
 }
 
 export const Playground: StoryObj<BadgeProps> = {
+  parameters: {
+    theme: 'split'
+  },
   args: {
     colorScheme: 'success',
     size: 'md',
