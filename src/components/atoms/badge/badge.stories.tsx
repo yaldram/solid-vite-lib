@@ -161,7 +161,8 @@ export const Playground: StoryObj<BadgeProps> = {
     size: 'md',
     bordered: false,
     isFlat: false,
-    isSquared: false
+    isSquared: false,
+    enableShadow: false
   },
   argTypes: {
     colorScheme: {
@@ -218,6 +219,18 @@ export const Playground: StoryObj<BadgeProps> = {
       name: 'isSquared',
       type: { name: 'boolean', required: false },
       description: 'Is Bordered',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' }
+      },
+      control: {
+        type: 'boolean'
+      }
+    },
+    enableShadow: {
+      name: 'enableShadow',
+      type: { name: 'boolean', required: false },
+      description: 'enableShadow',
       table: {
         type: { summary: 'boolean' },
         defaultValue: { summary: 'false' }

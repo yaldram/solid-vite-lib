@@ -39,7 +39,7 @@ const button = cva(['button'], {
 
 export type ButtonProps = VariantProps<typeof button> &
   ComponentProps<'button'> & {
-    colorScheme?: Exclude<ColorScheme, 'neutral'> | 'gradient'
+    colorScheme?: ColorScheme
   }
 
 export const Button: Component<ButtonProps> = (props) => {
@@ -62,7 +62,7 @@ export const Button: Component<ButtonProps> = (props) => {
       })}
       {...delegated}
     >
-      <div class='button-text'>{children.children}</div>
+      {children.children}
     </button>
   )
 }
